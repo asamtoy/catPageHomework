@@ -1,18 +1,38 @@
-var makeNewCat = function () {
-  var newCat = document.createElement("ul");
-  cats.classList.add("cat");
+var app = function(){
 
-  var catName = document.createElement("catName")
-  catName.textContent = "Name: Scratchy";
+var catArticle = document.createElement('article');
+catArticle.classList.add('cat');
 
-  var catFood = document.createElement("favouriteFood");
-  favouriteFood.textContent = "Favourite Food: raw fish";
+  var blockcat = document.createElement('blockcat');
+  blockcat.innerText = "Name: Squiggles";
 
-  li.appendChild(catFood);
-  li.appendChild(catName);
+  var cite = document.createElement('favouriteFood');
+  favouriteFood.innerText = "Favourite Food: dead flesh";
 
-  var cats = document.querySelector("section#cats");
-  cats.appendChild(newCat);
+  blockcat.appendChild(favouriteFood);
 
-  console.dir(cats);
+  catArticle.appendChild(blockcat);
+
+  var cats = document.querySelector('#cats');
+  cats.appendChild(catArticle);
 }
+
+
+// var makeNewCat = function () {
+//   var newCat = document.createElement("ul");
+//   cats.classList.add("cat");
+//
+//   var catName = document.createElement("catName")
+//   catName.textContent = "Name: Scratchy";
+//
+//   var catFood = document.createElement("favouriteFood");
+//   favouriteFood.textContent = "Favourite Food: raw fish";
+//
+//   li.appendChild(catFood);
+//   li.appendChild(catName);
+//
+//   var cats = document.querySelector("section#cats");
+//   cats.appendChild(newCat);
+//
+//   console.dir(cats);
+// }
