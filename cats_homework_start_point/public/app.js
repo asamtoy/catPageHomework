@@ -1,38 +1,25 @@
-var app = function(){
-
-var catArticle = document.createElement('article');
-catArticle.classList.add('cat');
-
-  var blockcat = document.createElement('blockcat');
-  blockcat.innerText = "Name: Squiggles";
-
-  var cite = document.createElement('favouriteFood');
-  favouriteFood.innerText = "Favourite Food: dead flesh";
-
-  blockcat.appendChild(favouriteFood);
-
-  catArticle.appendChild(blockcat);
-
-  var cats = document.querySelector('#cats');
-  cats.appendChild(catArticle);
-}
+var cats = [
+  {
+    name: "boba",
+    favFood: "Broccoli"
+  },
+  {
+    name: "Barnaby",
+    favFood: "Tuna"
+  },
+  {
+    name: "Kat",
+    favFood: "Raw meat"
+  }
+]
 
 
-// var makeNewCat = function () {
-//   var newCat = document.createElement("ul");
-//   cats.classList.add("cat");
-//
-//   var catName = document.createElement("catName")
-//   catName.textContent = "Name: Scratchy";
-//
-//   var catFood = document.createElement("favouriteFood");
-//   favouriteFood.textContent = "Favourite Food: raw fish";
-//
-//   li.appendChild(catFood);
-//   li.appendChild(catName);
-//
-//   var cats = document.querySelector("section#cats");
-//   cats.appendChild(newCat);
-//
-//   console.dir(cats);
-// }
+  cats.forEach(function(cat){
+    var catsUl = document.getElementById("cats")
+    var li = document.createElement("li")
+    var b = document.createElement("b")
+    li.innerText = cat.name
+    b.innerText = cat.favFood
+    li.appendChild(b)
+    catsUl.appendChild(li)
+  })
